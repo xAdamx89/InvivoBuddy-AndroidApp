@@ -18,7 +18,8 @@
     <style name="Theme.InvivoBuddy.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/tlo_latte</item> <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenBackground">@color/tlo_latte</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
 
         <item name="postSplashScreenTheme">@style/Theme.InvivoBuddy.NoActionBar</item>
     </style>

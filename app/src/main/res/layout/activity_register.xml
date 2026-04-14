@@ -2,84 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp"
     android:background="@color/tlo_latte"
-    tools:context=".ui.LoginActivity">
+    android:padding="32dp"
+    tools:context=".ui.RegisterActivity">
 
     <TextView
-        android:id="@+id/welcomeTitle"
+        android:id="@+id/welcomeRegisterTitle"
         style="@style/NaglowekInvivo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Witaj w InvivoBuddy Mne i CEBE!!!!"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginSubtitle"
+        android:layout_marginBottom="32dp"
+        android:text="Utwórz konto"
+        app:layout_constraintBottom_toTopOf="@+id/userNameInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/loginSubtitle"
-        style="@style/NaglowekInvivo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Zaloguj się"
-        android:textSize="22sp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/userNameInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeTitle" />
-
     <EditText
         android:id="@+id/userNameInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Nazwa użytkownika"
         android:inputType="text|textNoSuggestions"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/passwordInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginSubtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeRegisterTitle" />
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:hint="Hasło"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userNameInput" />
-
-    <Button
-        android:id="@+id/loginButton"
-        style="@style/GlownyPrzyciskInvivo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Zaloguj"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <Button
         android:id="@+id/registerButton"
         style="@style/GlownyPrzyciskInvivo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Zarejestruj się!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:text="Zarejestruj się"
+        app:layout_constraintBottom_toTopOf="@+id/backToLoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+    <Button
+        android:id="@+id/backToLoginButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Masz już konto? Zaloguj się"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
