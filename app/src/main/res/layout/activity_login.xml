@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="32dp"
     android:background="@color/tlo_latte"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <TextView
         android:id="@+id/welcomeTitle"
